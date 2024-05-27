@@ -29,7 +29,25 @@
   </url>
   
   <url>
+    <loc>https://fomal.inoru.top/box/nav/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://fomal.inoru.top/box/gallery/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://fomal.inoru.top/life/movies/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -47,16 +65,7 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/box/nav/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://fomal.inoru.top/life/movies/index.html</loc>
+    <loc>https://fomal.inoru.top/life/music/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -83,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/life/music/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://fomal.inoru.top/personal/love/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/site/time/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://fomal.inoru.top/social/fcircle/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -129,6 +120,15 @@
   
   <url>
     <loc>https://fomal.inoru.top/social/link/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://fomal.inoru.top/site/time/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -157,7 +157,7 @@
 
   <url>
     <loc>https://fomal.inoru.top/</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -165,14 +165,14 @@
   
   <url>
     <loc>https://fomal.inoru.top/tags/Markdown/</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://fomal.inoru.top/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -181,7 +181,7 @@
   
   <url>
     <loc>https://fomal.inoru.top/categories/%E6%BC%94%E7%A4%BA/</loc>
-    <lastmod>2024-05-22</lastmod>
+    <lastmod>2024-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
