@@ -6895,7 +6895,65 @@ div#archive {
   -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
   -o-transform: scale(0.5);
-} 
+}
+
+:root {
+  --cursor-arrow: url("/assets/cur/noa/正常选择.cur");
+  --cursor-backrunning: url("/assets/cur/murasame/正常选择.cur");
+  --cursor-handwriting: url("/assets/cur/orie/set图片.cur");
+  --cursor-help: url("/assets/cur/koharu/帮助选择.cur");
+  --cursor-link: url("/assets/cur/murasame/链接选择.cur");
+  --cursor-input: url("/assets/cur/kurumi/文本选择.cur");
+  /*  
+  --cursor-ban: url("/assets/cur/murasame/不可用.cur");
+  --cursor-busy: url("/assets/cur/murasame/正常选择.cur");
+  --cursor-move: url("/assets/cur/noa/正常选择.cur");
+  */
+}
+
+body *, html * {
+  cursor: var(--cursor-arrow),auto;
+}
+
+img {
+  cursor: var(--cursor-handwriting),auto !important;
+}
+
+a:hover {
+  cursor: var(--cursor-link),auto;
+}
+
+input:hover {
+  cursor: var(--cursor-input),auto;
+}
+
+article h1:hover, article h2:hover, article h3:hover, article h4:hover, article h5:hover, article h6:hover, article li:hover, article p:hover, article span:hover {
+  cursor: var(--cursor-input),auto;
+}
+
+summary:hover {
+  cursor: var(--cursor-help),auto !important;
+}
+
+button:hover {
+  cursor: var(--cursor-backrunning),auto;
+}
+
+i:hover {
+  cursor: var(--cursor-arrow),auto;
+}
+
+#footer-wrap a:hover {
+  cursor: var(--cursor-link),auto;
+}
+
+#pagination .page-number:hover {
+  cursor: var(--cursor-link),auto;
+}
+
+#nav .site-page:hover {
+  cursor: var(--cursor-link),auto;
+}
 
 /* twikoo评论美化 */
 /* 自定义twikoo评论输入框高度 */
