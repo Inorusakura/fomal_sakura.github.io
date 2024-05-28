@@ -2607,7 +2607,7 @@ if ((lunar["IMonthCn"] == "九月" && lunar["IDayCn"] == "初九")) {
 
 //----------------------------------------------------------------
 
-/* 听话鼠标 start
+/* 听话鼠标 start */
 var CURSOR;
 
 Math.lerp = (a, b, n) => (1 - n) * a + n * b;
@@ -2620,10 +2620,8 @@ const getStyle2 = (el, attr) => {
   } catch (e) { }
   return "";
 };
-*/
 
 // 为了屏蔽异步加载导致无法读取颜色值，这里统一用哈希表预处理
-/*
 const map = new Map();
 map.set('red', "rgb(241, 71, 71)");
 map.set('orange', "rgb(241, 162, 71)");
@@ -2707,7 +2705,7 @@ class Cursor {
   CURSOR = new Cursor();
   // 需要重新获取列表时，使用 CURSOR.refresh()
 })();
-*/
+
 /* 听话鼠标 end */
 
 //----------------------------------------------------------------
