@@ -6911,20 +6911,9 @@ div#archive {
   */
 }
 
-body *, html * {
-  cursor: var(--cursor-arrow),auto;
-}
-
-img {
-  cursor: var(--cursor-handwriting),auto !important;
-}
-
-a:hover {
-  cursor: var(--cursor-link),auto;
-}
-
-input:hover {
-  cursor: var(--cursor-input),auto;
+body,
+html{
+  cursor: var(--cursor-arrow),auto !important;
 }
 
 article h1:hover, article h2:hover, article h3:hover, article h4:hover, article h5:hover, article h6:hover, article li:hover, article p:hover, article span:hover {
@@ -6935,26 +6924,37 @@ summary:hover {
   cursor: var(--cursor-help),auto !important;
 }
 
-button:hover {
-  cursor: var(--cursor-backrunning),auto;
+img{
+  cursor: var(--cursor-handwriting),auto !important;
 }
 
-i:hover {
-  cursor: var(--cursor-arrow),auto;
+a:hover{
+    cursor: var(--cursor-link),auto;
 }
 
-#footer-wrap a:hover {
-  cursor: var(--cursor-link),auto;
+input:hover{
+    cursor: var(--cursor-input),auto;
+}
+/* 悬停按钮时的鼠标指针 */
+button:hover{
+    cursor: var(--cursor-backrunning),auto;
 }
 
-#pagination .page-number:hover {
-  cursor: var(--cursor-link),auto;
+i:hover{
+    cursor: var(--cursor-arrow),auto;
 }
 
-#nav .site-page:hover {
-  cursor: var(--cursor-link),auto;
+#footer-wrap a:hover{
+      cursor: var(--cursor-link),auto;
 }
 
+#pagination .page-number:hover{
+      cursor: var(--cursor-link),auto;
+}
+
+#nav .site-page:hover{
+      cursor: var(--cursor-link),auto;
+}
 /* twikoo评论美化 */
 /* 自定义twikoo评论输入框高度 */
 #twikoo .el-textarea textarea {
