@@ -18,10 +18,12 @@
   
   <entry>
     <title>测试标题</title>
-    <link href="https://fomal.inoru.top/posts/2013454d.html"/>
-    <id>https://fomal.inoru.top/posts/2013454d.html</id>
+    <link href="https://fomal.inoru.top/posts/2013455d.html"/>
+    <id>https://fomal.inoru.top/posts/2013455d.html</id>
     <published>2022-08-09T10:19:03.000Z</published>
     <updated>2022-10-23T14:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>#test</p>]]></content>
     
     
     <summary type="html">测试文本</summary>
