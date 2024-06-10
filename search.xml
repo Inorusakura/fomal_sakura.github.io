@@ -4,25 +4,25 @@
   
     
     <entry>
-      <title>测试标题</title>
-      <link href="/posts/2013455d.html"/>
-      <url>/posts/2013455d.html</url>
+      <title>Java笔记整理</title>
+      <link href="/posts/24061018d.html"/>
+      <url>/posts/24061018d.html</url>
       
-        <content type="html"><![CDATA[<p>#test</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>前言:博主学习中,此文为java笔记整理,会随学习进度慢慢增加.</strong></p><h3 id="Java跨平台原理"><strong>Java跨平台原理:</strong></h3><ol><li><strong>各平台都有JVM模拟器来运行Java程序</strong></li><li><strong>JVM是用来运行java程序的java虚拟机</strong></li><li><strong>核心类库是java写好的程序,用来调用的</strong></li><li><strong>JRE是java的运行环境,由JVM和核心类库组成</strong></li><li><strong>JDK是java开发工具包,由JRE开发环境和开发工具java,javac等组成</strong></li></ol><h3 id="基础代码"><strong>基础代码:</strong></h3><ul><li><strong>psvm : main主方法,必须有</strong></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span></span><br></pre></td></tr></table></figure><ul><li><strong>sout :打印内容</strong></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure><ul><li><strong>引入Scanner : idea中会自动补齐</strong></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br></pre></td></tr></table></figure><ul><li><strong>定义Scanner名称:</strong></li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scanner 名称 = <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br></pre></td></tr></table></figure><ul><li><strong>使用Scanner:</strong></li></ul><p><strong>变量 = 名称.next数据类型(); // 字符串不需要加上数据类型,字符直接使用字符串类型</strong></p><h3 id="运算符"><strong>运算符:</strong></h3><ul><li><p><strong>除法使用&quot; / &quot; : 整数操作只能得到整数,要小数需有浮点数参与运算</strong></p></li><li><p><strong>取余使用&quot; % &quot; :</strong></p></li></ul><ol><li><strong>奇偶判断 :数值 % 2 的结果为0或1 0为偶 1为奇</strong></li><li><strong>个位计算 :数值 / 1 % 10 的结果</strong></li><li><strong>十位计算 :数值 / 10 %10 的结果</strong></li><li><strong>百位计算 :数值 / 100 % 10 的结果</strong></li><li><strong>即 将想取的数位的后面的值都改为零进行相除并取余</strong></li></ol><ul><li><strong>自增自减运算符:++与–为变量的值+1与-1，++在前先自增再操作++,++在后先操作再自增</strong></li></ul><h3 id="变量"><strong>变量 :</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义变量</span></span><br><span class="line">数据类型 变量名=数据值;</span><br></pre></td></tr></table></figure><h6 id="数据类型"><strong>数据类型:</strong></h6><ul><li><strong>整数:</strong></li></ul><ol><li><strong>byte 1字节 ==范围-128~127==</strong></li><li><strong>short 2字节</strong></li><li><strong>==int 4字节 常用&amp;默认==</strong></li><li><strong>long 8字节 定义时需在后面加&quot;L&quot;标识</strong></li></ol><ul><li><strong>小数:</strong></li></ul><ol><li><strong>float 4字节 定义时需在后面加&quot;F&quot;标识</strong></li><li><strong>==double 8字节 常用&amp;默认==</strong></li></ol><ul><li><strong>字符(一个字):</strong></li></ul><ol><li><strong>char 2字节 所有字符,底层都会存在一份数值表示形式</strong></li></ol><ul><li><strong>布尔:</strong></li></ul><ol><li><strong>boolean 1字节</strong></li></ol><ul><li><strong>字符串:</strong></li></ul><ol><li><strong>string</strong></li></ol><ul><li><p><strong>强制转换 : 目标数据类型 变量名 = (目标数据类型) 被强转的数据;</strong></p></li><li><p><strong>隐式转换 : 小数值赋值给大数值先将小数值转换为大数值再进行运算</strong></p></li><li><p><strong>取值范围从小到大：</strong></p><p><strong>byte&gt;short&gt;int&gt;long&gt;float&gt;double</strong></p></li><li><p><strong>byte short char 三种数据在运算时会提升为int再计算</strong></p></li><li><p><strong>标识符命名规则:</strong></p></li></ul><ol><li><strong>由数字,字母,下划线_和美元符$组成</strong></li><li><strong>不能以数字开头,不能是关键字,区分大小写</strong></li></ol><ul><li><strong>不同进制使用方式:</strong></li></ul><ol><li><strong>110十进制；==0b==110二进制；==0==110八进制；==0x==10十六进制</strong></li></ol><ul><li><strong>二进制:</strong></li></ul><ol><li><p><strong>计算时使用补码进行计算</strong></p></li><li><p><strong>第一位(高位)为1是负数,为0是正数</strong></p></li><li><p><strong>正数的补码反码相同</strong></p></li><li><p><strong>补码 = 原码的反码 +1</strong></p></li><li><p><strong>原码 = 补码的反码 +1</strong></p></li><li><p><strong>例如: int a = 130 130强制转换为二进制为10000010,为补码,转原码为11111110</strong></p><p><strong>所以 byte b = (byte)a = 0b11111110 = -126</strong></p></li></ol>]]></content>
       
       
       <categories>
           
-          <category> 演示 </category>
+          <category> 笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Markdown </tag>
+            <tag> Java </tag>
             
-            <tag> 外挂标签 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
