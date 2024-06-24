@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/life/music/index.html</loc>
+    <loc>https://fomal.inoru.top/box/nav/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -110,15 +110,6 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/box/nav/index.html</loc>
-    
-    <lastmod>2023-03-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://fomal.inoru.top/life/movies/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
@@ -128,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/personal/bb/index.html</loc>
+    <loc>https://fomal.inoru.top/life/music/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -146,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://fomal.inoru.top/social/fcircle/index.html</loc>
+    <loc>https://fomal.inoru.top/personal/bb/index.html</loc>
     
     <lastmod>2023-03-22</lastmod>
     
@@ -173,6 +164,15 @@
   </url>
   
   <url>
+    <loc>https://fomal.inoru.top/social/fcircle/index.html</loc>
+    
+    <lastmod>2023-03-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://fomal.inoru.top/site/echarts/index.html</loc>
     
     <lastmod>2022-09-10</lastmod>
@@ -191,20 +191,6 @@
 
   
   <url>
-    <loc>https://fomal.inoru.top/tags/Java/</loc>
-    <lastmod>2024-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://fomal.inoru.top/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://fomal.inoru.top/tags/Markdown/</loc>
     <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -218,17 +204,31 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://fomal.inoru.top/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://fomal.inoru.top/tags/Java/</loc>
     <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
+    <loc>https://fomal.inoru.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://fomal.inoru.top/categories/%E6%BC%94%E7%A4%BA/</loc>
+    <lastmod>2024-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://fomal.inoru.top/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
