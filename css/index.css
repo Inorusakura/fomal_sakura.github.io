@@ -6912,7 +6912,7 @@ div#archive {
 }
 
 body *, html * {
-  cursor: var(--cursor-arrow),auto;
+  cursor: var(--cursor-arrow) 4 4,auto;
 }
 
 img {
