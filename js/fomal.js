@@ -387,111 +387,111 @@ document.onkeydown = function (e) {
 //----------------------------------------------------------------
 
 /* 雪花特效 start */
-if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-  // 移动端不显示
-} else {
-  // document.write('<canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;pointer-events:none"></canvas>');
+// if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+//   // 移动端不显示
+// } else {
+//   // document.write('<canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;pointer-events:none"></canvas>');
 
-  window && (() => {
-    let e = {
-      flakeCount: 50, // 雪花数目
-      minDist: 150,   // 最小距离
-      color: "255, 255, 255", // 雪花颜色
-      size: 1.5,  // 雪花大小
-      speed: .5,  // 雪花速度
-      opacity: .7,    // 雪花透明度
-      stepsize: .5    // 步距
-    };
-    const t = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
-      window.setTimeout(e, 1e3 / 60)
-    }
-      ;
-    window.requestAnimationFrame = t;
-    const i = document.getElementById("snow"),
-      n = i.getContext("2d"),
-      o = e.flakeCount;
-    let a = -100,
-      d = -100,
-      s = [];
-    i.width = window.innerWidth,
-      i.height = window.innerHeight;
-    const h = () => {
-      n.clearRect(0, 0, i.width, i.height);
-      const r = e.minDist;
-      for (let t = 0; t < o; t++) {
-        let o = s[t];
-        const h = a,
-          w = d,
-          m = o.x,
-          c = o.y,
-          p = Math.sqrt((h - m) * (h - m) + (w - c) * (w - c));
-        if (p < r) {
-          const e = (h - m) / p,
-            t = (w - c) / p,
-            i = r / (p * p) / 2;
-          o.velX -= i * e,
-            o.velY -= i * t
-        } else
-          o.velX *= .98,
-            o.velY < o.speed && o.speed - o.velY > .01 && (o.velY += .01 * (o.speed - o.velY)),
-            o.velX += Math.cos(o.step += .05) * o.stepSize;
-        n.fillStyle = "rgba(" + e.color + ", " + o.opacity + ")",
-          o.y += o.velY,
-          o.x += o.velX,
-          (o.y >= i.height || o.y <= 0) && l(o),
-          (o.x >= i.width || o.x <= 0) && l(o),
-          n.beginPath(),
-          n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
-          n.fill()
-      }
-      t(h)
-    }
-      , l = e => {
-        e.x = Math.floor(Math.random() * i.width),
-          e.y = 0,
-          e.size = 3 * Math.random() + 2,
-          e.speed = 1 * Math.random() + .5,
-          e.velY = e.speed,
-          e.velX = 0,
-          e.opacity = .5 * Math.random() + .3
-      }
-      ;
-    document.addEventListener("mousemove", (e => {
-      a = e.clientX,
-        d = e.clientY
-    }
-    )),
-      window.addEventListener("resize", (() => {
-        i.width = window.innerWidth,
-          i.height = window.innerHeight
-      }
-      )),
-      (() => {
-        for (let t = 0; t < o; t++) {
-          const t = Math.floor(Math.random() * i.width)
-            , n = Math.floor(Math.random() * i.height)
-            , o = 3 * Math.random() + e.size
-            , a = 1 * Math.random() + e.speed
-            , d = .5 * Math.random() + e.opacity;
-          s.push({
-            speed: a,
-            velX: 0,
-            velY: a,
-            x: t,
-            y: n,
-            size: o,
-            stepSize: Math.random() / 30 * e.stepsize,
-            step: 0,
-            angle: 180,
-            opacity: d
-          })
-        }
-        h()
-      }
-      )()
-  }
-  )();
-}
+//   window && (() => {
+//     let e = {
+//       flakeCount: 50, // 雪花数目
+//       minDist: 150,   // 最小距离
+//       color: "255, 255, 255", // 雪花颜色
+//       size: 1.5,  // 雪花大小
+//       speed: .5,  // 雪花速度
+//       opacity: .7,    // 雪花透明度
+//       stepsize: .5    // 步距
+//     };
+//     const t = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (e) {
+//       window.setTimeout(e, 1e3 / 60)
+//     }
+//       ;
+//     window.requestAnimationFrame = t;
+//     const i = document.getElementById("snow"),
+//       n = i.getContext("2d"),
+//       o = e.flakeCount;
+//     let a = -100,
+//       d = -100,
+//       s = [];
+//     i.width = window.innerWidth,
+//       i.height = window.innerHeight;
+//     const h = () => {
+//       n.clearRect(0, 0, i.width, i.height);
+//       const r = e.minDist;
+//       for (let t = 0; t < o; t++) {
+//         let o = s[t];
+//         const h = a,
+//           w = d,
+//           m = o.x,
+//           c = o.y,
+//           p = Math.sqrt((h - m) * (h - m) + (w - c) * (w - c));
+//         if (p < r) {
+//           const e = (h - m) / p,
+//             t = (w - c) / p,
+//             i = r / (p * p) / 2;
+//           o.velX -= i * e,
+//             o.velY -= i * t
+//         } else
+//           o.velX *= .98,
+//             o.velY < o.speed && o.speed - o.velY > .01 && (o.velY += .01 * (o.speed - o.velY)),
+//             o.velX += Math.cos(o.step += .05) * o.stepSize;
+//         n.fillStyle = "rgba(" + e.color + ", " + o.opacity + ")",
+//           o.y += o.velY,
+//           o.x += o.velX,
+//           (o.y >= i.height || o.y <= 0) && l(o),
+//           (o.x >= i.width || o.x <= 0) && l(o),
+//           n.beginPath(),
+//           n.arc(o.x, o.y, o.size, 0, 2 * Math.PI),
+//           n.fill()
+//       }
+//       t(h)
+//     }
+//       , l = e => {
+//         e.x = Math.floor(Math.random() * i.width),
+//           e.y = 0,
+//           e.size = 3 * Math.random() + 2,
+//           e.speed = 1 * Math.random() + .5,
+//           e.velY = e.speed,
+//           e.velX = 0,
+//           e.opacity = .5 * Math.random() + .3
+//       }
+//       ;
+//     document.addEventListener("mousemove", (e => {
+//       a = e.clientX,
+//         d = e.clientY
+//     }
+//     )),
+//       window.addEventListener("resize", (() => {
+//         i.width = window.innerWidth,
+//           i.height = window.innerHeight
+//       }
+//       )),
+//       (() => {
+//         for (let t = 0; t < o; t++) {
+//           const t = Math.floor(Math.random() * i.width)
+//             , n = Math.floor(Math.random() * i.height)
+//             , o = 3 * Math.random() + e.size
+//             , a = 1 * Math.random() + e.speed
+//             , d = .5 * Math.random() + e.opacity;
+//           s.push({
+//             speed: a,
+//             velX: 0,
+//             velY: a,
+//             x: t,
+//             y: n,
+//             size: o,
+//             stepSize: Math.random() / 30 * e.stepsize,
+//             step: 0,
+//             angle: 180,
+//             opacity: d
+//           })
+//         }
+//         h()
+//       }
+//       )()
+//   }
+//   )();
+// }
 
 /* 雪花特效 end */
 
@@ -1120,16 +1120,16 @@ function createtime1() {
 
   var ascll = [
     `欢迎来到樱の祈愿小屋🌸!`,
-    `Future is now 🍭🍭🍭`,
-    `
+    `美しい世界を祈る`,
+//     `
         
-██ ███   ██  █████  ███████ ██   ██  █████  ████  ██  ██ ██   ██ ███████  ████
-██ ████  ██ ██   ██ ██   ██ ██   ██ ██     ██  ██ ██ ██  ██   ██ ██   ██ ██  ██
-██ ██ ██ ██ ██   ██ ███████ ██   ██  ████  ██████ ████   ██   ██ ███████ ██████
-██ ██  ████ ██   ██ ██  ██  ██   ██     ██ ██  ██ ██ ██  ██   ██ ██  ██  ██  ██
-██ ██   ███  █████  ██   ██ ███████ █████  ██  ██ ██  ██  █████  ██   ██ ██  ██
+// ██ ███   ██  █████  ███████ ██   ██  █████  ████  ██  ██ ██   ██ ███████  ████
+// ██ ████  ██ ██   ██ ██   ██ ██   ██ ██     ██  ██ ██ ██  ██   ██ ██   ██ ██  ██
+// ██ ██ ██ ██ ██   ██ ███████ ██   ██  ████  ██████ ████   ██   ██ ███████ ██████
+// ██ ██  ████ ██   ██ ██  ██  ██   ██     ██ ██  ██ ██ ██  ██   ██ ██  ██  ██  ██
+// ██ ██   ███  █████  ██   ██ ███████ █████  ██  ██ ██  ██  █████  ██   ██ ██  ██
                                               
-`,
+// `,
     "小站已经苟活",
     dnum,
     "天啦!",
@@ -1156,18 +1156,18 @@ createtime1();
 function createtime2() {
   var ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为「大聪明」`, `Photo captured: `, ` 🤪 `];
 
-  setTimeout(
-    console.log.bind(
-      console,
-      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}`,
-      "color:white; background-color:#10bcc0",
-      "",
-      "",
-      'background:url("https://unpkg.zhimg.com/anzhiyu-assets@latest/image/common/tinggge.gif") no-repeat;font-size:450%'
-    )
-  );
+  // setTimeout(
+  //   console.log.bind(
+  //     console,
+  //     `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}`,
+  //     "color:white; background-color:#10bcc0",
+  //     "",
+  //     "",
+  //     'background:url("https://unpkg.zhimg.com/anzhiyu-assets@latest/image/common/tinggge.gif") no-repeat;font-size:450%'
+  //   )
+  // );
 
-  setTimeout(console.log.bind(console, "%c WELCOME %c 欢迎光临，大聪明", "color:white; background-color:#23c682", ""));
+  setTimeout(console.log.bind(console, "%c WELCOME %c 欢迎光临樱🌸の祈愿小屋", "color:white; background-color:#23c682", ""));
 
   setTimeout(
     console.warn.bind(
@@ -2478,7 +2478,7 @@ if (m == 3 && dd == 8) {//妇女节
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
-l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "好消息，日本没了！", "美国垮了，原因竟然是川普！", "微软垮了！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
+l = ["非常抱歉，因为不可控原因，博客将于明天停止运营！", "你的电脑已经过载，建议立即关机！", "你知道吗？站长很喜欢你哦！", "一分钟有61秒哦", "你喜欢的人跟别人跑了！"]
 if (m == 4 && dd == 1) {//愚人节，随机谎话
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire(l[Math.floor(Math.random() * l.length)]);
@@ -2499,7 +2499,7 @@ if (m == 5 && dd == 4) {//青年节
 }
 if (m == 5 && dd == 20) {//520
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("今年是520情人节\n快和你喜欢的人一起过吧！💑");
+    Swal.fire("今年是520情人节\n愿有情人都成兄妹！💑");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2523,7 +2523,7 @@ if (m == 12 && dd == 25) {//圣诞节
 }
 if (m == 10 && dd == 5) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 2004).toString() + "岁生日快乐！🥝");
+    Swal.fire("祝站长生日快乐！🥝");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2676,7 +2676,6 @@ class Cursor {
     this.cursor.classList.remove("active");
     this.pos = { curr: null, prev: null };
     this.pt = [];
-
     this.create();
     this.init();
     this.render();
